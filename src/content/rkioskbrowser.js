@@ -30,5 +30,5 @@ function RkioskBrowserStartup()
 
 function RkioskdelayedStartup()
 {
-  window.fullScreen = true;
+  window.fullScreen = false;
 }

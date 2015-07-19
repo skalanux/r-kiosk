@@ -12,6 +12,11 @@
               <menuitem id="menu_preferences" disabled="true"/>
         </menubar>
 
+   <popup id="contentAreaContextMenu"
+           onpopupshowing="if (event.target != this) return true; return false;"
+           onpopuphiding="if (event.target == this) gContextMenu = null;">
+   </popup>
+
   <commandset id="mainCommandSet">
     <command id="cmd_newNavigator" disabled="true"/>
     <command id="cmd_handleBackspace" disabled="true"/>
@@ -43,7 +48,7 @@
     <command id="Browser:Back" disabled="true"/>
     <command id="Browser:Forward" disabled="true"/>
     <command id="Browser:Stop" disabled="true"/>
-    <command id="Browser:Reload" disabled="true"/>
+    <command id="Browser:Reload" disabled="false"/>
     <command id="Browser:ReloadSkipCache" disabled="true"/>
     <command id="Browser:BackOrBackDuplicate" disabled="true"/>
     <command id="Browser:Forward" disabled="true"/>
@@ -67,9 +72,9 @@
     <command id="Tools:PrivateBrowsing" disabled="true"/>
     <command id="History:UndoCloseTab" disabled="true"/>
     <command id="History:UndoCloseWindow" disabled="true"/>
-    <command id="cmd_bm_open" disabled="true"/>
-    <command id="cmd_bm_openinnewwindow" disabled="true"/>
-    <command id="cmd_bm_openinnewtab" disabled="true"/>
+    <command id="cmd_bm_open" disabled="false"/>
+    <command id="cmd_bm_openinnewwindow" disabled="false"/>
+    <command id="cmd_bm_openinnewtab" disabled="false"/>
     <command id="cmd_bm_openfolder" disabled="true"/>
     <command id="cmd_bm_managefolder" disabled="true"/>
     <command id="cmd_bm_newfolder" disabled="true"/>
@@ -84,17 +89,17 @@
     <command id="cmd_copyLink" disabled="true"/>
     <command id="cmd_copyImageLocation" disabled="true"/>
     <command id="cmd_copyImageContents" disabled="true"/>
-    <command id="cmd_undo"  disabled="true"/>
-    <command id="cmd_redo"  disabled="true"/>
-    <command id="cmd_cut"  disabled="true"/>
-    <command id="cmd_copy"  disabled="true"/>
+    <command id="cmd_undo"  disabled="false"/>
+    <command id="cmd_redo"  disabled="false"/>
+    <command id="cmd_cut"  disabled="false"/>
+    <command id="cmd_copy"  disabled="false"/>
     <command id="cmd_paste"  disabled="true"/>
     <command id="cmd_delete" disabled="true"/>
-    <command id="cmd_selectAll" disabled="true"/>
+    <command id="cmd_selectAll" disabled="false"/>
     <command id="cmd_switchTextDirection" disabled="true"/>
-    <command id="cmd_textZoomReduce" disabled="true"/>
-    <command id="cmd_textZoomEnlarge" disabled="true"/>
-    <command id="cmd_textZoomReset" disabled="true"/>
+    <command id="cmd_textZoomReduce" disabled="false"/>
+    <command id="cmd_textZoomEnlarge" disabled="false"/>
+    <command id="cmd_textZoomReset" disabled="false"/>
  </commandset>
    <commandset id="placesCommands">
     <command id="Browser:ShowAllBookmarks" disabled="true"/>
@@ -116,11 +121,11 @@
     <key id="key_close" disabled="true"/>
     <key id="key_closeWindow" disabled="true"/>
     <key id="key_undo" disabled="true"/>
-    <key id="key_redo" disabled="true"/>
-    <key id="key_cut" disabled="true"/>
-    <key id="key_copy" disabled="true"/>
-    <key id="key_paste" disabled="true"/>
-    <key id="key_delete" disabled="true"/>
+    <key id="key_redo" disabled="false"/>
+    <key id="key_cut" disabled="false"/>
+    <key id="key_copy" disabled="false"/>
+    <key id="key_paste" disabled="false"/>
+    <key id="key_delete" disabled="false"/>
     <key id="key_selectAll" disabled="true"/>
     <key id="goBackKb" disabled="true"/>
     <key id="goForwardKb" disabled="true"/>
